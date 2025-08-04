@@ -1,0 +1,1 @@
+{"name":"Local: cowdance","url":"d:\\code\\USACO\\silve\\binary_search\\cowdance.cpp","tests":[{"id":1753595511333,"input":"5 8\n4\n7\n8\n6\n4","output":"4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\code\\USACO\\silve\\binary_search\\cowdance.cpp","group":"local","local":true}

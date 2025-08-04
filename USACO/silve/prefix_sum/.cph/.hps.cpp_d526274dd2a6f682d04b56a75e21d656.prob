@@ -1,0 +1,1 @@
+{"name":"Local: hps","url":"d:\\code\\silve_USACO\\prefix_sum\\hps.cpp","tests":[{"id":1752855051658,"input":"5\nP\nP\nH\nP\nS","output":"4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\code\\silve_USACO\\prefix_sum\\hps.cpp","group":"local","local":true}
