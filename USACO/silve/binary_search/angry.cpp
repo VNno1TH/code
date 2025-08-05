@@ -1,6 +1,6 @@
 #include "bits/stdc++.h"
 using namespace std;
-int         N, K;
+int N, K;
 vector<int> position;
 
 bool check(int mid)
