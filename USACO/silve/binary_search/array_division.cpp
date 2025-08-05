@@ -1,6 +1,4 @@
 #include <bits/stdc++.h>
-#include <linux/limits.h>
-#include <type_traits>
 using namespace std;
 
 #define ll long long
