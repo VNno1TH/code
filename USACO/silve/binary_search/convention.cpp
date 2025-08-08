@@ -1,63 +1,67 @@
-#include"bits/stdc++.h"
+#include "bits/stdc++.h"
 using namespace std;
-int N,M,C;
+int N, M, C;
 vector<int> t;
 
 int check(int k)
-{  
+{
 
-    int bus=0;
-    int cow=0;
-    int lcow=0;
+    int bus = 0;
+    int cow = 0;
+    int lcow = 0;
 
-    while(cow<N)
+    while (cow < N)
     {
-        if(lcow==cow) bus++;
+        if (lcow == cow)
+            bus++;
 
-        if(t[cow]-t[lcow]>k)
+        if (t[cow] - t[lcow] > k)
         {
-           lcow=cow;
+            lcow = cow;
         }
-        else if(cow-lcow+1==C)
+        else if (cow - lcow + 1 == C)
         {
             cow++;
-            lcow=cow;
+            lcow = cow;
         }
-        else{
+        else
+        {
             cow++;
         }
     }
-    return bus<=M;
+    return bus <= M;
 }
-int main(){
-    
+int main()
+{
+
     // freopen("convention.in","r",stdin);
     // freopen("convention.out","w",stdout);
 
-    cin>>N>>M>>C;
-    for(int i=0;i<N;i++)
+    cin >> N >> M >> C;
+    for (int i = 0; i < N; i++)
     {
-        int x;cin>>x;
+        int x;
+        cin >> x;
         t.push_back(x);
     }
 
-    sort(t.begin(),t.begin());    
-    
-    int l=0,r=t.back()-t[0];
+    sort(t.begin(), t.begin());
 
-    while(l<r)
+    int l = 0, r = t.back() - t[0];
+
+    while (l < r)
     {
-        int mid=l+(r-l)/2;
-        if(check(mid))
+        int mid = l + (r - l) / 2;
+        if (check(mid))
         {
-            r=mid;
+            r = mid;
         }
-        else{
-            l=mid+1;
+        else
+        {
+            l = mid + 1;
         }
-     }
-    
-        
-    cout<<l;
+    }
+
+    cout << l;
     return 0;
 }

@@ -6,8 +6,8 @@ vector<int> position;
 bool check(int mid)
 {
 	int be_fire = 0;
-	int fire    = 0;
-	int start   = 0;
+	int fire = 0;
+	int start = 0;
 	while (fire < K and be_fire < N)
 	{
 		int long_fire = position[start] + 2 * mid;
@@ -20,6 +20,7 @@ bool check(int mid)
 			else
 			{
 				start = i;
+
 				break;
 			}
 		}
@@ -29,17 +30,18 @@ bool check(int mid)
 }
 int main()
 {
-	// freopen("angry.in","r",stdin);
-	// freopen("angry.out","w",stdout);
+	//	 freopen("angry.in","r",stdin);
+	//	 freopen("angry.out","w",stdout);
 	cin >> N >> K;
-	for (int i = 0; i < N; i++)
+	for (int i = 0; i < N; Zi++)
 	{
 		int x;
 		cin >> x;
 		position.push_back(x);
 	}
-	sort(position.begin(), position.end());
 
+	sort(position.begin(), position.end());
+	
 	int l = 1, r = position.back() - position[0];
 
 	while (l < r)
@@ -53,7 +55,7 @@ int main()
 		{
 			l = mid + 1;
 		}
-	}
+	};
 
 	cout << l;
 	return 0;

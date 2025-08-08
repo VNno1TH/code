@@ -1,10 +1,4 @@
-#include <algorithm>
 #include <bits/stdc++.h>
-#include <climits>
-#include <cmath>
-#include <future>
-#include <iterator>
-#include <random>
 using namespace std;
 
 #define ll long long
@@ -18,15 +12,16 @@ using namespace std;
 int n, m, q;
 vector<int> a, b;
 
-int32_t main() {
-  ios::sync_with_stdio(false);
-  cin.tie(nullptr);
+int32_t main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
-  cin >> n >> m >> q;
-  a.resize(n);
-  b.resize(m);
-  FOR(i, 0, n) cin >> a[i];
-  FOR(i, 0, m) cin >> b[i];
-
-  ì
+    cin >> n >> m >> q;
+    a.resize(n);
+    b.resize(m);
+    FOR(i, 0, n)
+    cin >> a[i];
+    FOR(i, 0, m)
+    cin >> b[i];
 }

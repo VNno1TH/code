@@ -1,1 +1,0 @@
-{"name":"Local: convention","url":"d:\\code\\USACO\\silve\\binary_search\\convention.cpp","tests":[{"id":1753620445027,"input":"6 3 2\n1 1 10 14 4 3","output":"4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\code\\USACO\\silve\\binary_search\\convention.cpp","group":"local","local":true}
