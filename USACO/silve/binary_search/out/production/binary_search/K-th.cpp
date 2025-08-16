@@ -13,6 +13,7 @@ int main() {
 	
 	cin >> n >> t >> k;
 	k--;
+
 	int lo = 0;
 	int hi = n;
 	while (hi - lo > 1) {
@@ -25,6 +26,5 @@ int main() {
 	}
 
 	cout << "! " << hi << '\n';
-	return 0;
 }
 

@@ -8,6 +8,7 @@ using namespace std;
 #define endl '\n'
 int n, k;
 vector<int> t;
+
 bool valid(ll mid)
 {
     int count = 1;

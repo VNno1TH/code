@@ -1,0 +1,70 @@
+#include"bits/stdc++.h"
+using namespace std;
+#define ll long long
+int n;vector<double> x,v;
+
+const double  MAX_ERROR=1e-7;
+bool left_has_max=false,right_has_max=false;
+
+double gettime(double loc)
+{
+    double max_time=0;
+    for(int i=0;i<n;i++)
+    {
+        if(loc==x[i]) continue;
+        double  cur_time=abs(loc-x[i])/v[i];
+        if(cur_time>max_time)
+        {   
+            right_has_max=false;
+            left_has_max=false;
+            if(x[i]>loc)
+            {
+                right_has_max=true;
+            }
+            else{
+                left_has_max=true;
+            }
+        }
+        else if(cur_time==max_time)
+        {
+            if(x[i]>loc)
+                right_has_max=true;
+            else
+                left_has_max=true;
+        }
+
+    }
+    return max_time;
+}
+int main(){
+    cin>>n;
+    x.resize(n);v.resize(n);
+    for(int i=0;i<n;i++)cin>>x[i];
+    for(int i=0;i<n;i++)cin>>v[i];
+
+    double ans=(double)INT_MAX;
+
+    double lo=0,hi=0;
+    
+    for(int i=0;i<n;i++)
+    {
+        lo=min(lo,x[i]);
+        hi=max(hi,x[i]);
+    }
+    
+    while(hi-lo>=MAX_ERROR)
+    {
+        double mid=(lo+hi)/2;
+        ans=min(ans,gettime(mid));
+
+        if(left_has_max and right_has_max)
+            break;
+        if(left_has_max)
+            hi=mid;
+        else{
+            lo=mid;
+        }
+    }
+    cout<<fixed<<ans;return 0;
+        
+}

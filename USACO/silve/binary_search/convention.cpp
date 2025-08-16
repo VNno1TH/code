@@ -48,7 +48,7 @@ int main()
     sort(t.begin(), t.begin());
 
     int l = 0, r = t.back() - t[0];
-
+    
     while (l < r)
     {
         int mid = l + (r - l) / 2;
